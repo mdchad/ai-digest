@@ -11,9 +11,11 @@
   "dependencies": {
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
+    "airtable": "^0.11.5",
     "autoprefixer": "^10.4.13",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
+    "initialism": "^1.0.4",
     "next": "13.0.2",
     "postcss": "^8.4.18",
     "react": "18.2.0",
