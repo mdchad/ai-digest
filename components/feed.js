@@ -67,7 +67,7 @@ export default function Feed() {
                   <div className="flex items-center px-4 py-6 sm:px-6">
                     <div className="flex min-w-0 flex-1">
                       <div className="flex-shrink-0">
-                        { product.imageUrl ? <img className="h-20 w-20 rounded-md" src={product.imageUrl} alt="" /> : <div className="h-16 w-16 rounded-md flex justify-center items-center text-2xl bg-gradient-to-r from-indigo-200 to-pink-100">{initials(product.name)}</div> }
+                        { product.imageUrl ? <img className="h-20 w-20 rounded-md" src={product.imageUrl} alt="" /> : <div className="h-16 w-16 rounded-md flex justify-center items-center text-2xl bg-[#97D9E1]">{initials(product.name)}</div> }
                       </div>
                       <div className="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
                         <div>
@@ -77,9 +77,9 @@ export default function Feed() {
                           </p>
                             {/*<EnvelopeIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />*/}
                           <div className="flex">
-                            {!!product.tags.length && product.tags.map(tag => {
+                            {!!product.tags.length && product.tags.map((tag, i) => {
                               return (
-                                  <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">{tag}</span>
+                                  <span key={i} className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">{tag}</span>
                               )
                             })}
                           </div>

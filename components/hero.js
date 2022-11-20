@@ -36,8 +36,8 @@ export default function Hero() {
                   y2="474.645"
                   gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#9089FC" />
-                <stop offset={1} stopColor="#FF80B5" />
+                <stop stopColor="#D9AFD9" />
+                <stop offset={1} stopColor="#97D9E1" />
               </linearGradient>
             </defs>
           </svg>
