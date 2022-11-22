@@ -56,7 +56,8 @@ export default function Feed() {
   }, [])
 
   return (
-      <div className="overflow-hidden bg-white shadow sm:rounded-md">
+    <>
+      <div className="overflow-hidden bg-white sm:rounded-md">
         <div className="mx-6 mt-6">
           <h1 className="text-gray-900 text-xl">Featured Products</h1>
         </div>
@@ -75,36 +76,57 @@ export default function Feed() {
                           <p className="mt-2 flex items-center text-sm text-gray-500 mb-2">
                             <span className="truncate">{product.description}</span>
                           </p>
-                            {/*<EnvelopeIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />*/}
                           <div className="flex">
                             {!!product.tags.length && product.tags.map((tag, i) => {
                               return (
-                                  <span key={i} className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">{tag}</span>
+                                  <span key={i} className="inline-flex whitespace-nowrap items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">{tag}</span>
                               )
                             })}
                           </div>
                         </div>
-                        {/*<div className="hidden md:block">*/}
-                        {/*  <div>*/}
-                        {/*    <p className="text-sm text-gray-900">*/}
-                        {/*      Applied on <time dateTime={application.date}>{application.dateFull}</time>*/}
-                        {/*    </p>*/}
-                        {/*    <p className="mt-2 flex items-center text-sm text-gray-500">*/}
-                        {/*      <CheckCircleIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400" aria-hidden="true" />*/}
-                        {/*      {application.stage}*/}
-                        {/*    </p>*/}
-                        {/*  </div>*/}
-                        {/*</div>*/}
                       </div>
                     </div>
-                    {/*<div>*/}
-                    {/*  <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />*/}
-                    {/*</div>*/}
                   </div>
                 </a>
               </li>
           ))}
         </ul>
       </div>
+      <div className="overflow-hidden bg-white sm:rounded-md mt-6">
+        <div className="mx-6 mt-6">
+          <h1 className="text-gray-900 text-xl">Featured News</h1>
+        </div>
+        <ul role="list" className="">
+          {products.map((product) => (
+            <li key={product.name}>
+              <a href={product.href} className="block">
+                <div className="flex items-center px-4 py-6 sm:px-6">
+                  <div className="flex min-w-0 flex-1">
+                    <div className="flex-shrink-0">
+                      { product.imageUrl ? <img className="h-20 w-20 rounded-md" src={product.imageUrl} alt="" /> : <div className="h-16 w-16 rounded-md flex justify-center items-center text-2xl bg-[#D9AFD9]">{initials(product.name)}</div> }
+                    </div>
+                    <div className="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
+                      <div>
+                        <p className="truncate text-lg font-medium text-gray-700">{product.name}</p>
+                        <p className="mt-2 flex items-center text-sm text-gray-500 mb-2">
+                          <span className="truncate">{product.description}</span>
+                        </p>
+                        <div className="flex">
+                          {!!product.tags.length && product.tags.map((tag, i) => {
+                            return (
+                              <span key={i} className="inline-flex whitespace-nowrap items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">{tag}</span>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   )
 }
