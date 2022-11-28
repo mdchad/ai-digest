@@ -1,0 +1,26 @@
+[
+  {
+    "id": "scaleAI",
+    "name": "Scale AI",
+    "imageUrl": "",
+    "href": "https://scale.com/",
+    "tags": ["image generation", "product ads generation"],
+    "description": "A good company"
+  },
+  {
+    "id": "benBites",
+    "name": "Ben Bites",
+    "imageUrl": "",
+    "href": "#",
+    "tags": ["newsletter"],
+    "description": "Daily AI newsletter"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "imageUrl": "",
+    "href": "https://replicate.com/",
+    "tags": ["API provider"],
+    "description": "Run AI model"
+  }
+]
