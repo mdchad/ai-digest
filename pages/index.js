@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import HomePage from "../components/homepage";
 import Hero from "../components/hero";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className="bg-white">
       <Head>
@@ -32,4 +32,20 @@ export default function Home() {
       {/*</footer>*/}
     </div>
   )
+}
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const res = await fetch('http://localhost:3000/api/products')
+  console.log(res)
+  const products = await res.json()
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      products,
+    },
+  }
 }

@@ -5,15 +5,17 @@
     "imageUrl": "",
     "href": "https://scale.com/",
     "tags": ["image generation", "product ads generation"],
-    "description": "A good company"
+    "description": "A good company",
+    "meta": {}
   },
   {
     "id": "benBites",
     "name": "Ben Bites",
     "imageUrl": "",
-    "href": "#",
+    "href": "https://bensbites.beehiiv.com/",
     "tags": ["newsletter"],
-    "description": "Daily AI newsletter"
+    "description": "Daily AI newsletter",
+    "meta": {}
   },
   {
     "id": "replicate",
@@ -21,6 +23,7 @@
     "imageUrl": "",
     "href": "https://replicate.com/",
     "tags": ["API provider"],
-    "description": "Run AI model"
+    "description": "Run AI model",
+    "meta": {}
   }
 ]
